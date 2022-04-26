@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Configuration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Style-->
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- <link rel="stylesheet" href="css/constructor.css"> -->
+    <link rel="stylesheet" href="css/modal_stylesheet.css">
+    <link rel="stylesheet" href="css/draganddrop.css">
+
+    <link rel="stylesheet" href="css/configuration.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- <div class="preloader">
+        <img src="img/project/icons/Agregat/logo.svg" alt="">
+    </div> -->
+    <!-- Modal delete-->
+    <div class="modal fade delete-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/project/icons/close-icon.svg" alt=""></span>
+                    </button>
+                    <img src="img/project/icons/trash-big.svg" class="img-red-trash" alt="">
+                    <p class="remove-title">Удаление проекта<br><span class="name-proj">%Agregat NAME%</span></p>
+                    <p class="postscript">Будут безвозвратно удалены сведения о проекте ,а также связанные с ним настройки агрегатов и установок</p>
+                    <div class="buttons-confirm d-flex justify-content-center">
+                        <button type="button" class="btn-remove" data-dismiss="modal">Удалить</button>
+                        <button type="button" class="btn-cancel" data-dismiss="modal">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal element -->
+    <div class="modal fade add-new-preset" id="addElement" tabindex="-1" role="dialog" aria-labelledby="addElementLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-11">
+                                <p class="modal-title">Выберите пресет агрегата</p>
+                            </div>
+                            <div class="col-1">
+                                <button class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><img src="img/project/icons/close-icon.svg" alt=""></span>
+                                </button>
+                            </div>
+                            <div class="col-12 preset-list">
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <div class="empty-elem"></div>
+                                        <p class="preset-title">Пустой</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                                <div class="card-preset">
+                                    <div class="card-wrapp ">
+                                        <img class="detail" src="img/project/icons/Agregat/detail.svg" alt="">
+                                        <p class="preset-title">FS64ER3</p>
+                                        <input type="radio" name="val" value="" class="d-none">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <form action="" method="">
+                                    <button type="button" class="select-preset" data-dismiss="modal">Выбрать</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Burger modal-->
+    <div class="modal left fade burger-menu" id="burgerMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header-wrapp d-flex align-items-end">
+                        <div class="avatar">
+                            <img class="avatar-img" src="img/project/avatar.svg" alt="">
+                            <div class="user-info">
+                                <p class="name">Василий Петренко</p>
+                                <p class="position">Торговый директор</p>
+                            </div>
+                        </div>
+                        <div class="settings">
+                            <img src="img/project/settings.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-wrapp">
+                        <div class="list">
+                            <div class="list-title d-flex align-items-center">
+                                <p>Проекты</p>
+                                <img src="img/project/icons/arrow-details.svg" alt="">
+                            </div>
+                            <div class="list-items">
+                                <div class="item">
+                                    <a href="#">Пользователи</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Права</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Страницы</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Шаблоны</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list-title d-flex align-items-center">
+                                <p>Админка</p>
+                                <img src="img/project/icons/arrow-details.svg" alt="">
+                            </div>
+                            <div class="list-items">
+                                <div class="item">
+                                    <a href="#">Пользователи</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Права</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Страницы</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Шаблоны</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list-title d-flex align-items-center">
+                                <p>База данных</p>
+                                <img src="img/project/icons/arrow-details.svg" alt="">
+                            </div>
+                            <div class="list-items">
+                                <div class="item">
+                                    <a href="#">Пользователи</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Права</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Страницы</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Шаблоны</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list-title d-flex align-items-center">
+                                <p>База устройств</p>
+                                <img src="img/project/icons/arrow-details.svg" alt="">
+                            </div>
+                            <div class="list-items">
+                                <div class="item">
+                                    <a href="#">Пользователи</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Права</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Страницы</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Шаблоны</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list-title d-flex align-items-center">
+                                <p>База графиков</p>
+                                <img src="img/project/icons/arrow-details.svg" alt="">
+                            </div>
+                            <div class="list-items">
+                                <div class="item">
+                                    <a href="#">Пользователи</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Права</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Страницы</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Шаблоны</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list-title d-flex align-items-center">
+                                <p>База секций</p>
+                                <img src="img/project/icons/arrow-details.svg" alt="">
+                            </div>
+                            <div class="list-items">
+                                <div class="item">
+                                    <a href="#">Пользователи</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Права</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Страницы</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">Шаблоны</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+    <!--Context-modal-->
+    <div class="modal bottom fade context-modal" id="contextModal" tabindex="-1" role="dialog" aria-labelledby="contextModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <ul class="context-menu">
+                                <li>
+                                    <div class="context-item control-up d-flex align-items-center" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/arrow-details.svg" alt="">
+                                        <p>Поднять на уровень выше</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item control-down d-flex align-items-center" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/arrow-details.svg" alt="">
+                                        <p>Опустить на уровень ниже</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item d-flex align-items-center" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/edit-black.svg" alt="">
+                                        <p>Изменить</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item d-flex align-items-center" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/edit-black.svg" alt="">
+                                        <p>Конфигурация</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item d-flex align-items-center" data-dismiss="modal" data-toggle="modal" data-target="#addElement">
+                                        <img class="img-context" src="img/project/icons/edit-black.svg" alt="">
+                                        <p>Загрузить шаблон</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item d-flex align-items-center" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/edit-black.svg" alt="">
+                                        <p>Выгрузить в 3D</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item d-flex align-items-center" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/edit-black.svg" alt="">
+                                        <p>Выгрузить в RTF</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="context-item d-flex align-items-center rm-btn-modal delete-comp" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal">
+                                        <img class="img-context" src="img/project/icons/edit-black.svg" alt="">
+                                        <p>Удалить</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End context modal-->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4  d-flex align-items-center d-xl-none">
+                    <img class="burger-icon" src="img/project/icons/burger.svg" alt="" class="btn" data-toggle="modal" data-target="#burgerMenu">
+                </div>
+                <div class="col-4 justify-content-center justify-content-xl-start  col-xl-2 d-flex align-items-center">
+                    <a href="#"><img class="logo" src="img/login/logo.svg" alt=""></a>
+                </div>
+                <div class="col-7 d-none d-xl-flex align-items-center">
+                    <div class="tab active-tab">
+                        <a href="#">
+                            <p class="name-tab">Проекты</p>
+                        </a>
+                    </div>
+                    <div class="tab">
+                        <a href="#">
+                            <p class="name-tab">Админка</p>
+                        </a>
+                        <div class="header-drop">
+                            <div class="dropdown-menu">
+                                <div class="triangle"></div>
+                                <a class="dropdown-item">
+                                    <p>Пользователи</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Права</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Страницы</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Шаблоны</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <a href="#">
+                            <p class="name-tab">База данных</p>
+                        </a>
+                        <div class="header-drop">
+                            <div class="dropdown-menu">
+                                <div class="triangle"></div>
+                                <a class="dropdown-item">
+                                    <p>Пользователи</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Права</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Страницы</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Шаблоны</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <a href="#">
+                            <p class="name-tab">База устройств</p>
+                        </a>
+                        <div class="header-drop">
+                            <div class="dropdown-menu">
+                                <div class="triangle"></div>
+                                <a class="dropdown-item">
+                                    <p>Пользователи</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Права</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Страницы</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Шаблоны</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <a href="#">
+                            <p class="name-tab">База графиков</p>
+                        </a>
+                        <div class="header-drop">
+                            <div class="dropdown-menu">
+                                <div class="triangle"></div>
+                                <a class="dropdown-item">
+                                    <p>Пользователи</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Права</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Страницы</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Шаблоны</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <a href="#">
+                            <p class="name-tab">База секций</p>
+                        </a>
+                        <div class="header-drop">
+                            <div class="dropdown-menu">
+                                <div class="triangle"></div>
+                                <a class="dropdown-item">
+                                    <p>Пользователи</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Права</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Страницы</p>
+                                </a>
+                                <a class="dropdown-item">
+                                    <p>Шаблоны</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xl-3  d-flex align-items-center justify-content-end">
+                    <div class="user-block">
+                        <div class="user-info d-none d-xl-block">
+                            <p class="name">Василий Петренко</p>
+                            <p class="position">Торговый директор</p>
+                        </div>
+                        <a href="#"><img src="img/project/avatar.svg" alt=""></a>
+                    </div>
+                    <div class="settings-tab d-none d-xl-block">
+                        <a href="#"><img class="settings" src="img/project/settings.svg" alt=""></a>
+                        <div class="header-drop">
+                            <div class="dropdown-menu">
+                                <div class="triangle"></div>
+                                <a class="dropdown-item d-flex align-items-center">
+                                    <p>Пользователи</p>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center">
+                                    <p>Права</p>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center">
+                                    <p>Страницы</p>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center">
+                                    <p>Шаблоны</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="breadcrumbs">
+            <div class="container-fluid">
+                <div class="row  d-flex align-items-center">
+                    <div class="col-10 breadcrumbs-section">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Проект </a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Проект спорткомплекса 1</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col-2 tz-section">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-section mobile-menu">
+                <ul>
+                    <li class="structure-item">
+                        <h2 class="section-title">Структура проекта</h2>
+                        <img src="img/config/icon/select.svg" alt="">
+
+                    </li>
+                    <li class="detail-item">
+                        <h2 class="section-title">Подбор оборудования</h2>
+                        <img src="img/config/icon/select.svg" alt="">                   
+                    </li>
+                </ul>
+        </div>
+
+
+
+        <div class="main-block">
+            <h2 class="section-title select-detail"><img src="img/config/icon/select.svg" alt="">Подбор оборудования</h2>
+
+
+            <div class="left-section structure structure-mobile">
+                        
+                    <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Структура проекта</h2>
+                    <div class="controls">
+                        <div class="control-wrapp"><img src="img/config/icon/add.svg" alt=""></div>
+                        <div class="control-wrapp"><img src="img/config/icon/edit.svg" alt=""></div>
+                        <div class="control-wrapp"><img src="img/config/icon/excel.svg" alt=""></div>
+                        <div class="control-wrapp"><img src="img/config/icon/print.svg" alt=""></div>
+                        <div class="control-wrapp"><img src="img/config/icon/recycle.svg" alt=""></div>
+                        <div class="control-wrapp"><img src="img/config/icon/search.svg" alt=""></div>
+                    </div>
+
+                    <ul class="project-tree">
+                        <li class="tree-head">
+                            <div class="branch-text">
+                                <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                <div class="context">
+                                    <div class="dropdown">
+                                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="img/config/icon/сontext.svg" alt="">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="nested-list">
+                                <li>
+                                    <div class="branch-text">
+                                        <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                        <div class="context">
+                                            <div class="dropdown">
+                                                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <img src="img/config/icon/сontext.svg" alt="">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="nested-list">
+                                        <li>
+                                            <div class="branch-text">
+                                                <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+
+                                                <div class="context">
+                                                    <div class="dropdown">
+                                                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <img src="img/config/icon/сontext.svg" alt="">
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="nested-list">
+                                <li>
+                                    <div class="branch-text">
+                                        <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                        <div class="context">
+                                            <div class="dropdown">
+                                                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <img src="img/config/icon/сontext.svg" alt="">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="nested-list">
+                                        <li>
+                                            <div class="branch-text">
+                                                <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p title="Full text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem veritatis consequatur ratione voluptas modi similique perspiciatis quae aspernatur iste debitis voluptate tempora, itaque consectetur impedit vitae ducimus atque distinctio temporibus libero enim quia a quibusdam. Necessitatibus rerum cupiditate laboriosam tempore reiciendis quae, mollitia illum non, quam quasi labore. Ab.</p>
+                                                <div class="context">
+                                                    <div class="dropdown">
+                                                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <img src="img/config/icon/сontext.svg" alt="">
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="nested-list">
+                                <li>
+                                    <div class="branch-text">
+                                        <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                        <div class="context">
+                                            <div class="dropdown">
+                                                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <img src="img/config/icon/сontext.svg" alt="">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                    <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="nested-list">
+                                        <li>
+                                            <div class="branch-text">
+                                                <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                                <div class="context">
+                                                    <div class="dropdown">
+                                                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <img src="img/config/icon/сontext.svg" alt="">
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="branch-text">
+                                                <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                                <div class="context">
+                                                    <div class="dropdown">
+                                                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <img src="img/config/icon/сontext.svg" alt="">
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="branch-text">
+                                                <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                                <div class="context">
+                                                    <div class="dropdown">
+                                                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <img src="img/config/icon/сontext.svg" alt="">
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                            <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
+            
+            <div class="left-section">
+                <div class="list-element">
+                    <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Подбор оборудования</h2>
+
+                    
+                    <div class="list-element_category element-section">
+
+                        <h3 class="group-title category-title"><img class="rotate" src="img/project/icons/Agregat/down-point.svg" alt=""> Решетки однорядные</h3>
+                        <ul class="category-elements items">
+                            <li class="d1p2531">1-Р-25-31 </li>
+                            <li class="d1p2532">1-Р-25-32 </li>
+                            <li class="d1p2533">1-Р-25-33 </li>
+                        </ul>
+                        <div class="details-list details"  data-attr='d1p2531'>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-31 </p>
+                            </div>
+                            <div class="detail-wrapp" data-attr='d1p2532'>
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-32 </p>
+                            </div>
+                            <div class="detail-wrapp" data-attr='d1p2533'>
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-33 </p>
+                            </div>
+                            
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="list-element_category element-section ">
+
+                        <h3 class="group-title category-title"><img class="rotate" src="img/project/icons/Agregat/down-point.svg" alt=""> Решетки однорядные</h3>
+                        <ul class="category-elements items">
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                        </ul>
+
+                        <div class="details-list details">
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="list-element_category element-section">
+
+                        <h3 class="group-title category-title"><img class="rotate" src="img/project/icons/Agregat/down-point.svg" alt=""> Решетки однорядные</h3>
+                        <ul class="category-elements items">
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                            <li>1-Р-25-35 </li>
+                        </ul>
+                        <div class="details-list details">
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                            <div class="detail-wrapp">
+                                <div class="detail-img_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                    
+                                </div>
+
+                                <p class="detail-name">1-Р-25-35 </p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                <div class="element-pict-section">
+                    <h2 class="section-title">Фото / Схема</h2>
+
+                    <div class="element-pict_wrapp">
+                        <img src="img/config/schema/image1.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="right-section details-info">
+
+
+
+                <div class="left-side description">
+                    
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active section-title" id="nav-data-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="true">Подбор</a>
+                            <a class="nav-item nav-link section-title" id="nav-descr-tab" data-toggle="tab" href="#nav-descr" role="tab" aria-controls="nav-descr" aria-selected="false">Описание</a>
+
+                            <a href="#" class="refresh"><img src="img/config/icon/refresh.svg" alt=""></a>
+                        </div>
+                    </nav>
+
+                    
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab"> 
+                            
+                            <div class="mobile-tab-navigation">
+                                <ul>
+                                    <li id="data">Ввод данных<img src="img/config/icon/select.svg" alt=""></li>
+                                    <li id="schema">Схема<img src="img/config/icon/select.svg" alt=""></li>
+                                    <li id="paramsTable">Результат<img src="img/config/icon/select.svg" alt=""></li>
+                                </ul>
+                            </div>
+
+                            <div class="data">
+                                <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Ввод данных</h2>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Угол наклона горизонтальных ламелей</label>
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <p>60 </p>
+                                                
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <p class="dropdown-item">30</p>
+                                                <p class="dropdown-item">60</p>
+                                                <p class="dropdown-item">90</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">∆T температуры воздуха охлаждения</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">K</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Способ крепления</label>
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <p>Саморезы</p>
+                                                
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <p class="dropdown-item">!Саморезы</p>
+                                                <p class="dropdown-item">Цветрые Саморезы</p>
+                                                <p class="dropdown-item">Саморезы 3000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Расход воздуха, V</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">m³/h</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">∆T температуры воздуха отопления</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">K</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Наличие демпфера</label>
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <p>Да </p>
+                                                
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <p class="dropdown-item">Нет</p>
+                                                <p class="dropdown-item">Да</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Растояние выброса воздуха, L</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">m</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Выбор цвета RAL</label>
+                                        <div class="dropdown color-select">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <p>60 </p>
+                                                
+                                            </button>
+                                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                                <div class="dropdown-item">
+                                                    <div class="container-fluid color">
+                                                        <div class="row">
+                                                            <div class="col-2">
+                                                                <div class="circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <p class="color-name">Ral 3134</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item">
+                                                    <div class="container-fluid color">
+                                                        <div class="row">
+                                                            <div class="col-2">
+                                                                <div class="circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <p class="color-name">Ral 3134 2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-item">
+                                                    <div class="container-fluid color">
+                                                        <div class="row">
+                                                            <div class="col-2">
+                                                                <div class="circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <p class="color-name">Ral 3134 3</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Наличие фильтра G4</label>
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <p>Да </p>
+                                                
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <p class="dropdown-item">Да</p>
+                                                <p class="dropdown-item">Нет</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Высота от потолка, h</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">m³/h</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Количество</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">m³/h</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Количество</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">m³/h</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="input-wrapp">
+                                        <label for="input">Количество</label>
+                                        <div class="input-wrapp_units">
+                                            <input type="text">
+                                            <p class="unit">m³/h</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                
+
+
+                                <div class="clearfix"></div>
+                                
+                            </div>
+
+                            <div class="schema">
+                                <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Схема</h2>
+
+                                <div class="schema-img-wrapp">
+                                    
+                                    <div class="schema_img">
+                                        <img src="img/config/schema/image1.png" alt="">
+                                    </div>
+                                    
+
+                                </div>
+                                
+                            </div>
+                            <div class="element-pict-section">
+                                <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Фото / Схема</h2>
+
+                                <div class="element-pict_wrapp">
+                                    <img src="img/config/schema/image1.png" alt="">
+                                </div>
+                                
+                            </div>
+
+                            <div class="cleafrix"></div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-descr" role="tabpanel" aria-labelledby="nav-descr-tab">
+
+                            <div class="description-info">
+                                <h2 class="section-title">Подбор оборудования</h2>
+                            
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe accusamus adipisci sit, ut sunt inventore minus, ex quasi aliquid voluptate commodi, debitis dolor nesciunt quo? Debitis dolorum quibusdam, eaque error corrupti aspernatur molestiae atque, natus perferendis, voluptatem incidunt possimus aliquid enim eius. Eligendi labore, hic modi consequatur minus voluptatum quisquam sequi. Repellendus distinctio ducimus ea a ex quam quas, facere, suscipit eveniet inventore, amet eaque excepturi. Temporibus rem omnis officiis alias aspernatur. Ut amet optio at, modi delectus aliquam molestias doloremque veniam, aliquid vero debitis hic nihil, vel quasi velit nam voluptas sit. Distinctio nulla iusto, sed minima quisquam.
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-side structure">
+                        
+                        <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Структура проекта</h2>
+                        <div class="controls">
+                            <div class="control-wrapp"><img src="img/config/icon/add.svg" alt=""></div>
+                            <div class="control-wrapp"><img src="img/config/icon/edit.svg" alt=""></div>
+                            <div class="control-wrapp"><img src="img/config/icon/excel.svg" alt=""></div>
+                            <div class="control-wrapp"><img src="img/config/icon/print.svg" alt=""></div>
+                            <div class="control-wrapp"><img src="img/config/icon/recycle.svg" alt=""></div>
+                            <div class="control-wrapp"><img src="img/config/icon/search.svg" alt=""></div>
+                        </div>
+
+                        <ul class="project-tree">
+                            <li class="tree-head">
+                                <div class="branch-text">
+                                    <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                    <div class="context">
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                                <img class="cont" src="img/config/icon/сontext.svg" alt="">
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="nested-list">
+                                    <li>
+                                        <div class="branch-text">
+                                            <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                            <div class="context">
+                                                <div class="dropdown">
+                                                    <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="img/config/icon/сontext.svg" alt="">
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nested-list">
+                                            <li>
+                                                <div class="branch-text">
+                                                    <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+
+                                                    <div class="context">
+                                                        <div class="dropdown">
+                                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <img src="img/config/icon/сontext.svg" alt="">
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nested-list">
+                                    <li>
+                                        <div class="branch-text">
+                                            <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                            <div class="context">
+                                                <div class="dropdown">
+                                                    <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="img/config/icon/сontext.svg" alt="">
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nested-list">
+                                            <li>
+                                                <div class="branch-text">
+                                                    <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p title="Full text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem veritatis consequatur ratione voluptas modi similique perspiciatis quae aspernatur iste debitis voluptate tempora, itaque consectetur impedit vitae ducimus atque distinctio temporibus libero enim quia a quibusdam. Necessitatibus rerum cupiditate laboriosam tempore reiciendis quae, mollitia illum non, quam quasi labore. Ab.</p>
+                                                    <div class="context">
+                                                        <div class="dropdown">
+                                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <img src="img/config/icon/сontext.svg" alt="">
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nested-list">
+                                    <li>
+                                        <div class="branch-text">
+                                            <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                            <div class="context">
+                                                <div class="dropdown">
+                                                    <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="img/config/icon/сontext.svg" alt="">
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                        <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nested-list">
+                                            <li>
+                                                <div class="branch-text">
+                                                    <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                                    <div class="context">
+                                                        <div class="dropdown">
+                                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <img src="img/config/icon/сontext.svg" alt="">
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="branch-text">
+                                                    <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                                    <div class="context">
+                                                        <div class="dropdown">
+                                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <img src="img/config/icon/сontext.svg" alt="">
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="branch-text">
+                                                    <img class="rotate2" src="img/config/icon/select.svg" alt=""> <p  title="Full text">Lorem ipsum.</p>
+                                                    <div class="context">
+                                                        <div class="dropdown">
+                                                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <img src="img/config/icon/сontext.svg" alt="">
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Изменить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Удалить</p>
+                                                                <p class="dropdown-item"><img src="img/config/icon/add-black.svg" alt="">Создать</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="separator clearfix"></div>
+
+                <div class="right-section_params-table">
+                    <div class="clearfix"></div>
+                    
+                    <div class="title-wrapp">
+                        <h2 class="section-title"><img src="img/config/icon/select.svg" alt="">Результат</h2>
+
+                        <div class="filter-wrapp">
+                            <img class="filter" src="img/config/icon/filter.svg" alt="">
+                            <p>Выключить фильтры</p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapp">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="element-name">Наименование <br>элемента</th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина,mm</p>
+                                        
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="long-param">
+                                        <p>Cкорость воздуха, vef (m/s)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Cкорость на растоянии L, vL (m/s)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Живое сечение, Aef (m2)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Разница температур, ∆tL (K)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Живое сечение, Aef (m2)м</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Разница температур, ∆tL (K)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Живое сечение, Aef (m2)м</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Разница температур, ∆tL (K)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Живое сечение, Aef (m2)м</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Ширина струи, b0.2 (m)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Разница температур, ∆tL (K)</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="param">
+                                        <p>Живое сечение, Aef (m2)м</p>
+                                        <div class="input-wrapp">
+                                            <label for="ot">От</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="input-wrapp">
+                                            <label for="Do">До</label>
+                                            <input type="text">
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="element-name">Element 42</td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="long-param">
+                                        <p>Длинный параметр</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                    <td class="param">
+                                        <p>73,46</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="right-section details">
+                
+                <h2 class="section-title">Результат</h2>
+                
+                <div class="detail-wrapp" data-attr="d1p2531">
+                    <div class="detail-img_wrapp">
+                        <img src="img/config/schema/image1.png" alt="">
+                        
+                    </div>
+
+                    <p class="detail-name">1-Р-25-35 </p>
+                </div>
+                <div class="detail-wrapp"  data-attr="d1p2532">
+                    <div class="detail-img_wrapp">
+                        <img src="img/config/schema/image1.png" alt="">
+                        
+                    </div>
+
+                    <p class="detail-name">1-Р-25-35 </p>
+                </div>
+                <div class="detail-wrapp"  data-attr="d1p2533">
+                    <div class="detail-img_wrapp">
+                        <img src="img/config/schema/image1.png" alt="">
+                        
+                    </div>
+
+                    <p class="detail-name">1-Р-25-35 </p>
+                </div>
+                
+            </div>
+
+            
+            
+        </div>
+    </main>
+    
+    <!--Bootstrap-->
+    <script src="js/jQuery3.3.1Uncompressed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script> 
+
+    <script src="js/config.js"></script>
+</body>
+
+</html>

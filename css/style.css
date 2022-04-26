@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*-------------------Montserrat---------------------*/
+@font-face {
+  font-family: 'Montserrat';
+  src: local("../fonts/Montserrat/Montserrat Light"), local("Montserrat-Light"), url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("../fonts/Montserrat/Montserrat-Regular"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("../fonts/Montserrat/Montserrat Medium"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("../fonts/Montserrat/Montserrat SemiBold"), url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("../fonts/Montserrat/Montserrat Bold"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*--------------------Fira Sans------------------------*/
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans Thin"), local("FiraSans-Thin"), url("../fonts/Fira_Sans/FiraSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans ExtraLight"), local("FiraSans-ExtraLight"), url("../fonts/Fira_Sans/FiraSans-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans Light"), local("FiraSans-Light"), url("../fonts/Fira_Sans/FiraSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans-Regular"), url("../fonts/Fira_Sans/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans Medium"), url("../fonts/Fira_Sans/FiraSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans SemiBold"), url("../fonts/Fira_Sans/FiraSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira_Sans';
+  src: local("../fonts/Fira_Sans/FiraSans Bold"), url("../fonts/Fira_Sans/FiraSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body, html {
+  height: 100%;
+  background-color: black;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.preloader {
+  min-height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 2s all ease-in-out;
+  transition: 2s all ease-in-out;
+}
+
+.preloader h1 {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  font-size: 86px;
+  font-weight: bold;
+}
+
+.preloader h2 {
+  color: white;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: bold;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.first-page {
+  -webkit-transition: 4s all ease-in-out;
+  transition: 4s all ease-in-out;
+  min-height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 2s all ease-in-out;
+  transition: 2s all ease-in-out;
+  background: #123 url(img/nature2.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.first-page .title h1 {
+  font-size: 86px;
+  color: black;
+}
+
+.main {
+  height: 100%;
+}
+
+.west,
+.north,
+.east,
+.south {
+  min-height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.west .cards,
+.north .cards,
+.east .cards,
+.south .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.west .cards .card,
+.north .cards .card,
+.east .cards .card,
+.south .cards .card {
+  width: 300px;
+  height: 550px;
+  position: relative;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-box-shadow: inset 200px 200px 200px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 200px 200px 200px rgba(0, 0, 0, 0.3);
+  margin: 0 30px;
+}
+
+.west .cards .card img, .west .cards .card iframe,
+.north .cards .card img,
+.north .cards .card iframe,
+.east .cards .card img,
+.east .cards .card iframe,
+.south .cards .card img,
+.south .cards .card iframe {
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+}
+
+.west .cards .card:last-child,
+.north .cards .card:last-child,
+.east .cards .card:last-child,
+.south .cards .card:last-child {
+  margin-right: 0;
+}
+
+.west .cards .card:hover,
+.north .cards .card:hover,
+.east .cards .card:hover,
+.south .cards .card:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.west .cards .card:nth-child(2n),
+.north .cards .card:nth-child(2n),
+.east .cards .card:nth-child(2n),
+.south .cards .card:nth-child(2n) {
+  margin-top: 50px;
+}
+
+.west .letter,
+.north .letter,
+.east .letter,
+.south .letter {
+  font-size: 60px;
+  line-height: 165px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(0deg, black 0%, rgba(0, 212, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00d4ff",GradientType=1);
+}
+
+.west .describe,
+.north .describe,
+.east .describe,
+.south .describe {
+  color: white;
+  width: 50%;
+  margin: 30px auto;
+  margin-top: 50px;
+}
+
+.cv {
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 100px;
+  color: white;
+  display: inline-block;
+  margin-top: 60px;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  text-decoration: unset;
+}
+
+.cv:hover {
+  color: #004f93;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+footer {
+  text-align: center;
+  color: #004f93;
+}
+/*# sourceMappingURL=style.css.map */

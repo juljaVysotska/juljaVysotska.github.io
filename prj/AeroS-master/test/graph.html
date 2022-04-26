@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Graph</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<script src="../js/jQuery3.3.1Uncompressed.js"></script>
+	<link rel="stylesheet" href="../css/creating-step3.css">
+    <link class="include" rel="stylesheet" type="text/css" href="../css/jquery.jqplot.css" />
+
+	<style>
+
+		#drag,#drag2{
+			cursor: w-resize;
+			z-index: 999;
+			margin-left: -10px;
+			position: absolute;
+		}
+
+		.params,.coming-in,.coming-out{
+			width: 28% ;
+			min-width: 80px !important;
+			position: relative;
+			max-width: 580px !important;
+		}
+
+		.graph{
+			width: 100% !important;
+		}
+		.wrapp{
+
+			overflow-x: scroll;
+
+		}
+		.agregat{
+			width: 15%;
+		}
+		
+	</style>
+	<style type="text/css">
+        .jqplot-xaxis {
+            width: 584px;
+           // position: sticky !important;
+            height: 14px;
+            //left: 27px !important;
+            /* bottom: 0px; */
+            top: -20px;
+            left: 8px !important;
+           // background-color: white;
+            z-index: 200;
+			.font-light();
+            font-size: 11px;
+			line-height: 12px;
+			letter-spacing: -0.03em;
+
+			color: #828282;
+        }
+        .jqplot-xaxis-tick:first-child, .jqplot-xaxis-tick:last-child{
+            display: none;
+        }
+        .jqplot-yaxis{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+	<div class="container-fluid graph">
+		<div class="row">
+			<div class="col-12 d-flex">
+				
+				<div class="agregat" style="z-index: 10;">
+					<div class="wrapp">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12">
+									<div class="empty"></div>
+								</div>
+
+								<div class="col-12 table-responsive">
+									<table class="table table-hover">
+									  <thead>
+									    <tr>
+									      <th class="checkbox-section"></th>
+									      <th scope="col"  class="subtitle-category">Наименование агрегата</th>
+									      
+									    </tr>
+									  </thead>
+									  <tbody>
+
+									    <tr>
+									    	<td class="checkbox-section">
+									    		<div class="checkbox-block d-flex align-items-start">
+													<div class="custom-checkbox">
+														<div class="check-symb"></div>
+														
+													</div>
+													
+													<input type="checkbox" name="" value="" class="d-none" id="" >
+												</div>
+									    	</td>
+										    <td>
+										     	<p class="legend">PoolCompact</p>
+										    </td>
+									    </tr>
+									    <tr>
+									    	<td class="checkbox-section">
+									    		<div class="checkbox-block d-flex align-items-start">
+													<div class="custom-checkbox">
+														<div class="check-symb"></div>
+														
+													</div>
+													
+													<input type="checkbox" name="" value="" class="d-none" id="" >
+												</div>
+									    	</td>
+										    <td>
+										     	<p class="legend">PoolCompact</p>
+										    </td>
+									    </tr>
+									    <tr>
+									    	<td class="checkbox-section">
+									    		<div class="checkbox-block d-flex align-items-start">
+													<div class="custom-checkbox">
+														<div class="check-symb"></div>
+														
+													</div>
+													
+													<input type="checkbox" name="" value="" class="d-none" id="" >
+												</div>
+									    	</td>
+										    <td>
+										     	<p class="legend">PoolCompact</p>
+										    </td>
+									    </tr>
+									    <tr>
+									    	<td class="checkbox-section">
+									    		<div class="checkbox-block d-flex align-items-start">
+													<div class="custom-checkbox">
+														<div class="check-symb"></div>
+														
+													</div>
+													
+													<input type="checkbox" name="" value="" class="d-none" id="" >
+												</div>
+									    	</td>
+										    <td>
+										     	<p class="legend">PoolCompact</p>
+										    </td>
+									    </tr>
+									    <tr>
+									    	<td class="checkbox-section">
+									    		<div class="checkbox-block d-flex align-items-start">
+													<div class="custom-checkbox">
+														<div class="check-symb"></div>
+														
+													</div>
+													
+													<input type="checkbox" name="" value="" class="d-none" id="" >
+												</div>
+									    	</td>
+										    <td>
+										     	<p class="legend">PoolCompact</p>
+										    </td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>
+
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="params d-flex align-items-end" style="z-index: 10;">
+					<div class="wrapp">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12">
+									<p class="section-title">Парамеры</p>
+								</div>
+								<div class="col-12 table-responsive">
+									<table class="table table-hover table-params">
+									  <thead>
+									    <tr>
+									      <th scope="col"  class="subtitle-category">Площадь поперечного сечения, м²</th>
+									      <th scope="col"  class="subtitle-category">Мин расход воздуха, м³/ч</th>
+									      <th scope="col"  class="subtitle-category">Макс расход воздуха, м³/ч</th>
+									      <th scope="col"  class="subtitle-category">Скорость в сечении (макс), м/с</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>1,656</td>
+									      <td>1000</td>
+									      <td>22000</td>
+									      <td>2300</td>
+									    </tr>
+									    <tr>
+									      <td>1,656</td>
+									      <td>1000</td>
+									      <td>22000</td>
+									      <td>2300</td>
+									    </tr>
+									    <tr>
+									      <td>1,656</td>
+									      <td>1000</td>
+									      <td>22000</td>
+									      <td>2300</td>
+									    </tr>
+									     <tr>
+									      <td>1,656</td>
+									      <td>1000</td>
+									      <td>22000</td>
+									      <td>2300</td>
+									    </tr>
+									     <tr>
+									      <td>1,656</td>
+									      <td>1000</td>
+									      <td>22000</td>
+									      <td>2300</td>
+									    </tr>
+
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="coming-in d-flex align-items-end" style="z-index: 10;">
+					<img id="drag" src="../img/project/icons/separator.svg" alt="">
+					<div class="wrapp">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12 d-flex align-items-baseline">
+									<p class="section-title streams">Входящий поток</p>
+									<p class="units">м³/ч</p>
+								</div>
+								<div class="col-12">
+									<div class='d-none'></div>
+								    <div id="comingIn" style="margin-top:20px; margin-left:0.75rem; width:584px; ">
+										<div class="rows-hovers" style="width: 100%;position: absolute;top: 8px;z-index: 10;">
+											<div class="background" style="width: 100%;height: 54px;"></div>
+										</div>
+									</div>
+
+								    <div class="d-none" style="
+								    position: absolute;
+								    width: 303px;
+								    height: 88px;
+								    background-color: grey;
+								    left: 23px;
+								    top: 31px;
+								    z-index: -5;
+								    opacity: 0.1;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="coming-out d-flex align-items-end" style="z-index: 10;">
+					<img id="drag2" src="../img/project/icons/separator.svg" alt="">
+					<div class="wrapp">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12 d-flex align-items-baseline">
+									<p class="section-title streams">Исходящий поток</p>
+									<p class="units">м³/ч</p>
+								</div>
+								<div class="col-12">
+									<div class='d-none'></div>
+								    <div id="comingOut" style="margin-top:20px; margin-left:20px; width:584px; ">
+										<div class="rows-hovers" style="width: 100%;position: absolute;top: 8px;z-index: 10;">
+											<div class="background" style="width: 100%;height: 54px;"></div>
+										</div>
+									</div>
+								    <div class="d-none" style="
+								    position: absolute;
+								    width: 303px;
+								    height: 88px;
+								    background-color: grey;
+								    left: 23px;
+								    top: 31px;
+								    z-index: -5;
+								    opacity: 0.1;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!--need to be added in order to have hover and select effects-->
+
+
+			</div>
+		</div>
+	</div>
+
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam, assumenda rem temporibus! Placeat voluptate praesentium voluptatum, accusamus veritatis voluptates dolores in error architecto ullam obcaecati magni ut ex doloremque dolor, id corporis quisquam numquam rerum assumenda reprehenderit perferendis aperiam alias deserunt dicta. Dolorem obcaecati, optio culpa. Dignissimos accusamus omnis cupiditate cum beatae aliquid quia architecto aspernatur voluptate itaque, dolorem atque? Porro ratione ullam earum omnis quod modi libero provident dignissimos, ipsa, nemo necessitatibus. Cumque consequuntur labore culpa accusamus maxime, dolores alias, dicta fuga aliquam reprehenderit veniam expedita ex enim delectus, eveniet sed! Error, veniam ab ullam culpa laborum fugiat facilis deserunt impedit vitae, voluptatem fuga illum aut ad eaque nulla reiciendis itaque, ipsum adipisci commodi sequi, provident labore nostrum ea dolorem dolorum. Quia distinctio cupiditate minima libero quisquam quaerat rem iusto laborum magni asperiores eos minus excepturi, dolorum debitis itaque quam dolore molestiae obcaecati nemo qui ullam deserunt, consequatur aut. Consectetur veniam perspiciatis, esse dignissimos libero quisquam sequi doloribus quia incidunt ex tenetur optio! Fugiat labore perspiciatis optio odio fugit perferendis harum illo tempore explicabo aspernatur id, ducimus totam. Aspernatur nobis eum tempore iusto illo nisi facilis. Quo labore perspiciatis dolorum nobis distinctio nulla, blanditiis sequi veritatis harum, vero deserunt vitae id maxime ipsum est iure nemo soluta iusto possimus! Cumque odio, id, sed ipsum esse fuga asperiores illum ipsam harum sequi incidunt quos blanditiis nisi. Quo cum, quibusdam repudiandae a, inventore provident maxime consequatur reprehenderit ex aspernatur atque qui soluta nemo blanditiis error quas voluptatum doloremque tempora optio. Placeat necessitatibus, culpa fugiat nam perspiciatis, eum, eaque possimus qui ipsa libero, voluptatem! Nihil nostrum, at laudantium omnis doloribus vitae officia harum obcaecati veritatis velit officiis repellat, unde doloremque inventore! Voluptatum exercitationem quaerat unde optio pariatur nam quam rem qui nostrum fuga, harum ad obcaecati. Aspernatur atque, sapiente commodi. Aperiam beatae blanditiis eum? Nihil laboriosam est vero vel molestias modi quaerat accusantium qui ratione, saepe, dicta obcaecati necessitatibus nesciunt maiores nobis aliquid unde voluptas numquam iusto tenetur placeat, aperiam temporibus sunt nam! Tempora obcaecati nesciunt sed sunt debitis ad expedita voluptatum, voluptatem distinctio aspernatur, reiciendis iure laboriosam architecto dolorum ex voluptate deserunt dolor fugit praesentium quod dolores perspiciatis tempore. Repellat odit ratione dolorum libero aliquid nisi reiciendis quasi, itaque veniam! Voluptatum ipsum ipsam illo saepe culpa perspiciatis cumque aut eos eaque, dolor. Cum magni dolorum maiores facilis quo eveniet fugit voluptas, pariatur quaerat reiciendis ad beatae explicabo, enim quos saepe repellat consequuntur atque nostrum itaque esse consectetur nesciunt cumque. Consectetur quae recusandae nesciunt illum. Adipisci placeat, vero natus ullam nostrum quidem pariatur amet nulla laborum repudiandae eveniet officiis quod nihil quia quam alias architecto eum excepturi. Dignissimos dolorem eius, delectus amet. Quia natus libero maiores perferendis, cum, a accusamus cumque praesentium. Animi odio doloribus dolorum necessitatibus tenetur repudiandae, sit mollitia, soluta aut. Dignissimos obcaecati, repellendus. Temporibus sequi, consectetur quasi ducimus nam molestias mollitia dolorum dolor deserunt! Voluptatibus et cumque aut tempora praesentium ab saepe, quo quaerat nobis, dolorum placeat assumenda perferendis! Ipsa quos hic dolorum quo et enim esse neque fuga beatae aliquid, porro eligendi molestiae incidunt reprehenderit id animi maxime dolore similique officiis ea, magni sapiente! Dolore a repudiandae amet aliquam asperiores perspiciatis veritatis blanditiis dolores corporis, atque ducimus cupiditate officia minima quis enim facere? Quibusdam numquam dolore, saepe nihil autem vero tempora ipsa aliquam fugiat porro ad aut animi doloremque. Praesentium reprehenderit, laudantium veritatis optio repellendus sint. Adipisci mollitia reprehenderit, at fugiat, temporibus iusto nesciunt facere fuga repudiandae suscipit quod atque, eius labore. Pariatur, eos! Hic dignissimos, sunt nostrum laudantium unde? Nulla voluptates totam quaerat blanditiis maiores inventore ea, maxime excepturi ratione assumenda magni, fugit quibusdam. Ipsum quo error, et tempora officia temporibus facere. Voluptas dignissimos laborum explicabo, cum minus sed alias ea, nemo ratione reiciendis laudantium, iure quasi architecto nobis! Quasi nisi natus voluptatem deleniti, doloremque, eligendi nulla repudiandae aspernatur neque iure qui obcaecati autem veritatis vitae ex beatae, dolorum dicta dolore quidem! Voluptates nostrum et praesentium, fugiat quisquam quos officia unde numquam! Aliquid voluptatibus veritatis recusandae nulla ea magnam distinctio iure quis, hic cumque repellat, iusto magni maiores eius accusantium, natus repudiandae amet error saepe! Quibusdam, repudiandae error facilis doloremque nesciunt ut expedita adipisci tempora fugit quis, aut numquam nemo id accusamus praesentium. Laboriosam, iusto, esse?
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script>
+		var isResize = false;
+		var isResize2 = false;
+		  var left = $('.params');
+		  var drag = $('#drag');
+
+		  var drag2 = $('#drag2');
+
+		  
+		  drag.on('mousedown',function(){
+		      isResize = true;
+		    });
+		  drag2.on('mousedown',function(){
+		      isResize2 = true;
+		    });
+
+		 $(document).on("mousemove", function(e){
+		   if(isResize){
+		    
+		     left.width( e.pageX - $('.agregat').width());
+		      
+		     $('.coming-in').width( $('.col-12').width() - left.width() - $('.agregat').width() - $('.coming-out').width() -30);
+		   };
+		   
+		   if(isResize2){
+		    
+		     $('.coming-out').width($('.col-12').width() - e.pageX);
+		      
+		     $('.coming-in').width( $('.col-12').width() - left.width() - $('.agregat').width() - $('.coming-out').width()-30);
+
+		     if($('.coming-in').width() ==10){
+		     	isResize = true;
+
+		    	left.width( e.pageX - $('.agregat').width());
+
+		     }else{
+
+		     	isResize = false;
+		     }
+		   };
+		   
+
+		     
+		  }).on('mouseup',function(){
+		   isResize = false;
+		   isResize2 = false;
+		 });
+	</script>
+
+	<script>
+		$('.item').position();
+	</script>
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	 <script class="include" type="text/javascript" src="../js/jquery.jqplot.js"></script>
+   
+
+  <script class="include" type="text/javascript" src="../js/plugins/jqplot.barRenderer.min.js"></script>
+  <script class="include" type="text/javascript" src="../js/plugins/jqplot.canvasOverlay.js"></script>
+  <script class="include" type="text/javascript" src="../js/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+
+	<script src="../js/crating_third_step.js"></script>
+</body>
+</html>

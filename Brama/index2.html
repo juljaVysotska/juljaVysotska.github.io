@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- circle -->
+
+	<style>
+		.pie {
+		  display: inline-block;
+		  margin: .5em;
+		  width: 8em;
+		  height: 8em;
+		  position: relative;
+		  border-radius: 50%;
+		  /*background: green*/
+		}
+
+		.colour {
+		  border-radius: 50%;
+		  display: block;
+		  background: #fff;
+		  position: absolute;
+		  left: 10px;
+		  top: 10px;
+		  height: 60px;
+		  width: 60px;
+		  z-index: 999;
+		  background: #456
+		}
+
+
+		.pie-big{
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			background-image: linear-gradient(90deg, white 50%, transparent 50%),
+		                      linear-gradient(135deg, purple 50%, transparent 50%),
+
+		                      linear-gradient(180deg, green 50%, transparent 50%),
+
+		                      linear-gradient(225deg, red 50%, transparent 50%),
+
+		                      linear-gradient(270deg, yellow 50%, transparent 50%);
+		}
+
+		
+	</style>
+
+	<div class="pie-big" data-attr="sale,action,new">
+		<div class="colour"></div>
+		
+	</div>
+	<div class="pie  in-stock_lab sale_lab new_lab">
+		<div class="colour"></div>
+		<div class="lab stock"></div>
+		<div class="lab sale"></div>
+		<div class="lab in-stock"></div>
+		<div class="lab new"></div>
+	</div>
+
+
+	<script>
+		
+
+
+		const bigPie = document.querySelector('.pie-big');
+		let countAttr = bigPie.getAttribute('data-attr').split(',');
+		bigPie.addEventListener('click', function () {
+			this.classList.add('select');
+			labels(this, 'red');
+			this.style.backgroundColor= 'red';
+		});
+	 	
+
+
+	 	const obj = {
+			sale : {
+				color : "#9E824D"
+			},
+			new : {
+				color : "#5BAFDF"
+			}, 
+			inStock : {
+				color : "#BAC900"
+			},
+			action  : {
+				color : "#F7A840"
+			},
+		}
+
+		function labels(elem, color = 'white',select) {
+			let backgroundImage = `linear-gradient(90deg, ${color} 50%, transparent 50%)`
+
+		 	let deg = 90;
+			for( const i of countAttr){
+				if(obj.hasOwnProperty(i)){
+					deg +=45 
+					backgroundImage += ' , ' + decompLine(obj[i], deg, obj[i].color) ;					
+				}
+
+				let rot = (180 - countAttr.length * 45) /2;
+				elem.style.transform = `rotate(${rot}deg)`;				
+
+			}
+
+
+			elem.style.backgroundImage = backgroundImage;
+
+		}
+
+		function decompLine (line, deg, color, select = 'transparent') {
+			return `linear-gradient(${deg}deg, ${color}  50%, ${select} 50%)`;
+		}
+
+		labels(bigPie);
+
+		
+
+
+	</script>
+
+	<hr>
+
+
+	<!-- Rrrrrrotator -->
+
+	<style>
+		*{
+			padding: 0;
+			margin:0;
+			border: 0;
+		}
+		.rotator{
+			width: 100%;
+			background: rgba(123,123,123,.2);
+			
+		}
+		.wrapp{
+			/*position: relative;*/
+		}
+
+		.slide{
+			height: 10vh;
+
+			width: 100%;
+			background: rgba(255,0,0,.3);
+			
+
+		}
+
+		.more{
+			width: 100%;
+		}
+
+		.square{
+			height: 10vh;
+			width: calc((100%  - 45*3px)/3);
+			position: sticky;
+			top: 10px;
+			z-index: 999;
+			border: 5px solid yellow;
+			transition: .5s all ease;
+			left: 0;
+			pointer-events: none;
+		}
+
+	</style>
+
+	<div class="rotator">
+		<div class="wrapp">
+			<div class="square"></div>
+
+			<div class="slide slide1">slide 1</div>
+			<div class="slide slide2">slide 2</div>
+			<div class="slide slide3">slide 3</div>
+		</div>
+		
+	</div>
+
+	<hr>
+	<p class="more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus repellendus voluptas officiis excepturi minus ducimus, perspiciatis aliquam error minima voluptate deleniti consequatur accusancidunt quae hic. Dolores, nemo assumenda odio recusandae sit facilis omnis ullam repudiandae molestias neque laborum sapiente repellendus incidunt ab, tempora debitis, harum perspiciatis! Sed ipsam similique pariatur.</p>
+	
+
+	<script>
+		/*const rotatorWrapp = Array.from(document.querySelectorAll(".rotator .slide"));
+
+		console.log(rotatorWrapp);
+		const windeight = window.innerHeight;
+				let pixels = 0;
+		
+
+		rotatorWrapp.map((el) => {
+			el.addEventListener("mousewheel", function (e) {
+				e.preventDefault();
+
+				if(e.deltaY < 100){
+
+					setTimeout(()=> {
+						window.scrollTo({
+						   top: e.target.offsetTop - windeight,
+						    behavior: "smooth"
+						});
+						
+					},500);
+
+				}else{
+					setTimeout(()=> {
+						window.scrollTo({
+						    top: e.target.offsetTop + windeight,
+						    behavior: "smooth"
+						});
+
+					}, 500);
+				}
+			});
+
+
+			el.addEventListener('scroll', function (e) {
+				if(el.offsetTop !== window.scrollTop ) {
+					window.scrollTo({
+					top: el.offsetTop(),
+					behavior: 'smooth'
+					})
+				}
+			});
+		});*/
+
+
+// 		document.addEventListener("touchmove", (e) => {
+		   
+// detectDirection()
+// 		});
+// 		document.addEventListener("scroll", (e) => {
+		   
+// detectDirection()
+// 		});
+
+		// function detectDirection(){
+			// const rotatorWrapp = Array.from(document.querySelectorAll(".rotator .slide"));
+			// let lastScrollTop = 0;
+			// const windeight = window.innerHeight;
+			// // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+			// rotatorWrapp.map((el) => {
+			// 	el.addEventListener("touchmove", function(e){
+			// 		console.log(e.target);
+				   
+			// 	   const  st = window.pageYOffset || document.documentElement.scrollTop; 
+			// 	   if (st > lastScrollTop){
+			// 	      console.log("downscroll scroll");
+			// 	      window.scrollTo({
+			// 	      	top: e.target.offsetTop - windeight,
+			// 	      	behavior: 'smooth'
+			// 	      })
+
+			// 	   } else {
+			// 	      // upscroll code
+
+			// 	      console.log("up scroll");
+			// 	      console.log(e.target.offsetTop - window.scrollY);
+			// 	      window.scrollTo({
+			// 	      	top: e.target.offsetTop + windeight,
+			// 	      	behavior: 'smooth'
+			// 	      })
+
+			// 	   }
+			// 	   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+			// 	});
+			// })
+
+
+			
+		// }
+
+
+
+		
+
+
+	</script>
+
+	<hr>
+
+	<!-- data range -->
+	<style>
+		
+
+		input[type=range] {
+		  -webkit-appearance: none;
+		}
+		input[type=range]:focus {
+		  outline: none;
+		}
+		input[type=range]::-webkit-slider-runnable-track {
+		  width: 100%;
+		  height: 50px;
+		  cursor: pointer;
+		  background: white;
+		  border-bottom: 4px solid #009877;
+		}
+		input[type=range]::-webkit-slider-thumb {
+		    height: 50px;
+		  width: 270px;
+		  border-radius: 0;
+		  background: #009877;
+		  /*background: black;*/
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		}
+
+		input[type=range]::-webkit-slider-thumb:before {
+		    height: 50px;
+		  width: 170px;
+		  border-radius: 0;
+		  background: black;
+		  /*background: black;*/
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		  content: '';
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		}
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		
+		  background: white;
+		  border-bottom: 4px solid #009877;
+		}
+		input[type=range]::-moz-range-track {
+		  width: 100%;
+		  height: 50px;
+		  cursor: pointer;
+		  background: white;
+		  border-bottom: 4px solid #009877;
+		}
+		input[type=range]::-moz-range-thumb {
+		    height: 50px;
+		  width: 270px;
+		  border-radius: 0;
+		  background: #009877;
+		  cursor: pointer;
+		}
+		input[type=range]::-ms-track {
+		  width: 100%;
+		  height: 50px;
+		  cursor: pointer;
+		  background: white;
+		  border-bottom: 4px solid #009877;	
+		  color: transparent;
+		}
+		input[type=range]::-ms-fill-lower {
+		
+		  background: white;
+		}
+		input[type=range]::-ms-fill-upper {
+		
+		  background: white;
+		}
+		input[type=range]::-ms-thumb {
+		  
+		  height: 20px;
+		  width: 39px;
+		  border-radius: 7px;
+		  background: white;
+		
+		  cursor: pointer;
+		}
+		input[type=range]:focus::-ms-fill-lower {
+		
+		  background: white;
+		}
+		input[type=range]:focus::-ms-fill-upper {
+		
+		  background: white;
+		}
+
+		[type=range]{
+			width: 100%;
+		}
+		.date-rotator{
+			width: 100%;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			height: 500px;
+		}
+
+		.date-rotator .wrapp{
+
+			align-items: center;
+			justify-content: center;
+			transition: 1s all ease;
+			padding-left: calc((100% - 700px) / 2);
+		    padding-right: calc((100% - 700px) / 2);
+		}
+
+		.item{
+			height: 480px;
+			width: 700px;
+			margin-right: 122px;
+			background: lightblue;
+			display: inline-block;
+		}
+
+		.item:last-child{
+			margin-right: 0
+		}
+
+		.range-wrapp hr{
+			width: 1px ;
+			height: 10px;
+			border: 1px solid red;
+		}
+		.range-wrapp{
+			width: 80%;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.range-wrapp div{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left:  60px;
+			padding-right: 60px;
+			position: absolute;
+			bottom: 10px;
+			/*mix-blend-mode: hard-light;*/
+			/*background: url(https://i.citrus.ua/uploads/promo/iphonxr-images/copy_texture_1_large.png) no-repeat;*/
+			/*background-size: 100% 100%; */
+			width: calc(100% - 120px);
+		}
+
+		.range-wrapp li{
+			/*color: white;*/
+		}
+
+
+	</style>
+
+	<div class="date-range">
+		<div class="range-wrapp">
+			<input type="range" id="range" oninput='func();'  onchange='func();'>
+			
+		</div>
+
+		<div class="date-rotator">
+			<div class="wrapp">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+				
+		</div>
+	</div>
+
+	<script>
+		const dateItem = Array.from(document.querySelectorAll('.date-rotator .item'));
+		const dateWrapp = document.querySelector('.date-rotator .wrapp');
+
+		let fullWidth = 0;
+		let i =0;
+
+		dateItem.map((el) => {
+			fullWidth += parseFloat(getComputedStyle(el).width) + parseFloat(getComputedStyle(el).marginRight);
+						
+			dateWrapp.style.width = `${fullWidth + parseFloat(getComputedStyle(el).marginRight)+60}px`;
+
+			el.setAttribute('data-attr',  i++);
+			el.innerHTML = i;			
+			
+		});
+
+		function func() {
+			const range = document.getElementById('range');
+			let prop = fullWidth / 111;			
+			dateWrapp.style.marginLeft = `${-1* prop * range.value}px`;
+
+		}
+
+		function buildStrips() {
+			const range = parseFloat(getComputedStyle(document.getElementById('range')).width);
+			const rangeWrapp = document.querySelector('.range-wrapp');
+		  	let fragment = new DocumentFragment();
+		  	let fragmentWrapp = new DocumentFragment();
+				let div = document.createElement('div');
+				let arr = [2012,2013,2014,2015,2016,2017,2018,2019,2020]
+
+
+			for(let k =0; k<i;k++){
+				let hr = document.createElement('li');
+				hr.append(arr[k] +' ' + (k+1));
+			    div.append(hr);
+
+			}
+
+
+
+			rangeWrapp.append(div);
+
+
+
+ 
+
+		}
+
+		func();
+		buildStrips();
+
+
+
+	</script>
+
+	<!-- //ширина ренджа == ширине списка с датами 
+	//считать через пропорцию
+	 -->
+
+
+
+
+</body>
+</html>

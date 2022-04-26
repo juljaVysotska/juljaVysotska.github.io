@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hotels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/hotel-list.css">
+    <link rel="stylesheet" href="css/style-GE.css">
+    <link rel="stylesheet" href="css/hotel-list_GE.css">
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+	</script>
+</head>
+
+<body>
+    <div class="burger-menu_modal">
+        <a href="#" class="logo-burger"><img src="img/icon/Chubekhevi_logo-cut.svg" alt=""></a>
+        <img src="img/icon/close.svg" alt="" class="close">
+        <ul>
+            <li><a href="#">ჩუბეხევი</a></li>
+            <li><a href="#">სასტუმროები</a></li>
+            <li><a href="#">დამატებითი მომსახურება</a></li>
+            <li class="actual"><a href="#">ბლოგი</a></li>
+        </ul>
+        <div class="burger-footer">
+            <div class="social-media_links">
+                <a href="#" class="facebook">
+                    <svg width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.9453 4.34365C1.9453 4.90885 1.9453 7.43159 1.9453 7.43159H0V11.2075H1.9453V22.4283H5.94137V11.2079H8.62291C8.62291 11.2079 8.87405 9.39731 8.99579 7.41767C8.64677 7.41767 5.95648 7.41767 5.95648 7.41767C5.95648 7.41767 5.95648 5.22094 5.95648 4.8359C5.95648 4.45003 6.39217 3.93097 6.82279 3.93097C7.25261 3.93097 8.15978 3.93097 9 3.93097C9 3.41687 9 1.64054 9 1.34882e-08C7.87833 1.34882e-08 6.60224 1.34882e-08 6.03974 1.34882e-08C1.84652 -0.000260713 1.9453 3.77944 1.9453 4.34365Z" />
+                    </svg>
+                </a>
+                <a href="#" class="youtube">
+                    <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.9375 1.65625C23.2594 0.45 22.5234 0.228125 21.025 0.14375C19.5281 0.0421875 15.7641 0 12.5031 0C9.23594 0 5.47031 0.0421876 3.975 0.142188C2.47969 0.228125 1.74219 0.448437 1.05781 1.65625C0.359375 2.86094 0 4.93594 0 8.58906C0 8.59219 0 8.59375 0 8.59375C0 8.59688 0 8.59844 0 8.59844V8.60156C0 12.2391 0.359375 14.3297 1.05781 15.5219C1.74219 16.7281 2.47813 16.9469 3.97344 17.0484C5.47031 17.1359 9.23594 17.1875 12.5031 17.1875C15.7641 17.1875 19.5281 17.1359 21.0266 17.05C22.525 16.9484 23.2609 16.7297 23.9391 15.5234C24.6437 14.3313 25 12.2406 25 8.60312C25 8.60312 25 8.59844 25 8.59531C25 8.59531 25 8.59219 25 8.59062C25 4.93594 24.6437 2.86094 23.9375 1.65625ZM9.375 13.2812V3.90625L17.1875 8.59375L9.375 13.2812Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="lang-picker">
+                <a href="#" class="actual">GE</a>
+                <a href="#">EN</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <nav class="transparent first-screen">
+            <ul class="nav-list">
+                <li class="logo"><a href="#"><img src="img/icon/Chubekhevi_logo.svg" alt=""></a></li>
+                <li><a href="#">ჩუბეხევი</a></li>
+                <li><a href="#">სასტუმროები</a></li>
+                <li><a href="#">დამატებითი მომსახურება</a></li>
+                <li><a href="#">ბლოგი</a></li>
+            </ul>
+            <div class="social-media_links">
+                <a href="#" class="facebook">
+                    <svg width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.9453 4.34365C1.9453 4.90885 1.9453 7.43159 1.9453 7.43159H0V11.2075H1.9453V22.4283H5.94137V11.2079H8.62291C8.62291 11.2079 8.87405 9.39731 8.99579 7.41767C8.64677 7.41767 5.95648 7.41767 5.95648 7.41767C5.95648 7.41767 5.95648 5.22094 5.95648 4.8359C5.95648 4.45003 6.39217 3.93097 6.82279 3.93097C7.25261 3.93097 8.15978 3.93097 9 3.93097C9 3.41687 9 1.64054 9 1.34882e-08C7.87833 1.34882e-08 6.60224 1.34882e-08 6.03974 1.34882e-08C1.84652 -0.000260713 1.9453 3.77944 1.9453 4.34365Z" />
+                    </svg>
+                </a>
+                <a href="#" class="youtube">
+                    <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.9375 1.65625C23.2594 0.45 22.5234 0.228125 21.025 0.14375C19.5281 0.0421875 15.7641 0 12.5031 0C9.23594 0 5.47031 0.0421876 3.975 0.142188C2.47969 0.228125 1.74219 0.448437 1.05781 1.65625C0.359375 2.86094 0 4.93594 0 8.58906C0 8.59219 0 8.59375 0 8.59375C0 8.59688 0 8.59844 0 8.59844V8.60156C0 12.2391 0.359375 14.3297 1.05781 15.5219C1.74219 16.7281 2.47813 16.9469 3.97344 17.0484C5.47031 17.1359 9.23594 17.1875 12.5031 17.1875C15.7641 17.1875 19.5281 17.1359 21.0266 17.05C22.525 16.9484 23.2609 16.7297 23.9391 15.5234C24.6437 14.3313 25 12.2406 25 8.60312C25 8.60312 25 8.59844 25 8.59531C25 8.59531 25 8.59219 25 8.59062C25 4.93594 24.6437 2.86094 23.9375 1.65625ZM9.375 13.2812V3.90625L17.1875 8.59375L9.375 13.2812Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="lang-picker">
+                <a href="#">GE</a>
+                <a href="#" class="actual">EN</a>
+            </div>
+            <div class="burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <div class="head-picture  fadeInUp wow">
+            <img class="decoration" src="img/icon/decoration-hor.svg" alt="">
+            <img src="img/views/view2.jpg" alt="">
+        </div>
+        <div class="section-title  fadeInUp wow">
+            <h1>ისიამოვნეთ თქვენი ყოფნით</h1>
+            <p>
+                ინტერაქტიული და სახელმძღვანელო გამოცდილება, სადაც სტუმრები დააგემოვნებენ და შეისწავლიან უნიკალური გემოვნების პროფილების იდენტიფიცირებას (და დაფასებას!), რომლებიც სხვადასხვა ჩაის აძლევს მათ განსხვავებას.
+            </p>
+        </div>
+        <div class="hotel-search">
+            <div class="search-form">
+                <h2>გელით ადგილობრივი საოჯახო სასტუმროების მრავალფეროვნება</h2>
+                <p class="filter-collapse"><span>ჩამონგრევის ფილტრი</span><span style="display: none">ფილტრის ჩვენება</span></p>
+                <form action="" method="" onsubmit="submit(this)" class="collapsed1">
+                    <div class="input-wrapp room">
+                        <label for="">ოთახები</label>
+                        <div class="select-wrapp">
+                            <select name="" id="">
+                                <option value="1">1</option>
+                                <option value="2">12</option>
+                                <option value="3">13</option>
+                                <option value="4">14</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-wrapp capacity">
+                        <label for="">სტუმრების საერთო მოცულობა</label>
+                        <div class="select-wrapp">
+                            <select name="" id="">
+                                <option value="1">1</option>
+                                <option value="2">12</option>
+                                <option value="3">13</option>
+                                <option value="4">14</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-wrapp location">
+                        <label for="">Სპეციფიკური ადგილმდებარეობა</label>
+                        <div class="select-wrapp">
+                            <select name="" id="">
+                                <option value="1">1</option>
+                                <option value="2">12</option>
+                                <option value="3">13</option>
+                                <option value="4">14</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" id="btnSubmit" class="outline">იპოვნეთ სახლები</button>
+                </form>
+                <div class="clearfix"></div>
+                <div class="hotel-list">
+                    <div class="card  fadeInUp wow">
+                        <a href="#">
+                            <div class="img-cover">
+                                <img src="img/hotel-list/hotel1.jpg" alt="">
+                            </div>
+                            <div class="card-wrapp">
+                                <div class="text-wrapp">
+                                    <p class="place">ნაკრა, ნაკრა</p>
+                                    <p class="valley">ნაკრას ხეობა</p>
+                                </div>
+                                <p class="name">სასტუმრო ნაკრა</p>
+                                <div class="more">
+                                    <div class="info">
+                                        <div class="item">
+                                            <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M24 36H5V1H24V36Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 32H10C9.44772 32 9 31.5523 9 31V27C9 26.4477 9.44519 26 9.99748 26H19.0017C19.554 26 20 26.4477 20 27V31C20 31.5523 19.5523 32 19 32Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 16H10C9.44772 16 9 15.5523 9 15V6C9 5.44772 9.44519 5 9.99748 5H19.0017C19.554 5 20 5.44771 20 6V15C20 15.5523 19.5523 16 19 16Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="20" cy="21" r="1" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M0 36L29 36" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>5<span>ოთახები</span></p>
+                                        </div>
+                                        <div class="item">
+                                            <svg width="21" height="37" viewBox="0 0 21 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 11H7.5H10C12.2091 11 14 12.7909 14 15V19.3003C14 20.8605 13.4788 22.3759 12.5191 23.606L11.9688 24.3115L11.3503 33.208C11.241 34.7804 9.93367 36 8.35755 36H7.5H6.64245C5.06633 36 3.75897 34.7804 3.64967 33.208L3.03125 24.3115L2.48089 23.606C1.52122 22.3759 1 20.8605 1 19.3003V15C1 12.7909 2.79086 11 5 11Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="7.5" cy="4.5" r="3.5" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M16.5217 11L17.0852 11.1588C18.8092 11.6447 20 13.2176 20 15.0088V19.1697C20 20.8096 19.4243 22.3974 18.3733 23.6561L17.8261 24.3115L16.9603 33.6625C16.8574 34.7739 16.0765 35.7051 15 36V36" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M14 8C15.6569 8 17 6.433 17 4.5C17 2.567 15.6569 1 14 1" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>8<span>ხალხები</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="cost">
+                                        <p>დან</p>
+                                        <p class="price">65 GEL/day</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card  fadeInUp wow">
+                        <a href="#">
+                            <div class="img-cover">
+                                <img src="img/hotel-list/hotel1.jpg" alt="">
+                            </div>
+                            <div class="card-wrapp">
+                                <div class="text-wrapp">
+                                    <p class="place">ნაკრა, ნაკრა</p>
+                                    <p class="valley">ნაკრას ხეობა</p>
+                                </div>
+                                <p class="name">სასტუმრო ნაკრა</p>
+                                <div class="more">
+                                    <div class="info">
+                                        <div class="item">
+                                            <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M24 36H5V1H24V36Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 32H10C9.44772 32 9 31.5523 9 31V27C9 26.4477 9.44519 26 9.99748 26H19.0017C19.554 26 20 26.4477 20 27V31C20 31.5523 19.5523 32 19 32Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 16H10C9.44772 16 9 15.5523 9 15V6C9 5.44772 9.44519 5 9.99748 5H19.0017C19.554 5 20 5.44771 20 6V15C20 15.5523 19.5523 16 19 16Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="20" cy="21" r="1" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M0 36L29 36" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>5<span>ოთახები</span></p>
+                                        </div>
+                                        <div class="item">
+                                            <svg width="21" height="37" viewBox="0 0 21 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 11H7.5H10C12.2091 11 14 12.7909 14 15V19.3003C14 20.8605 13.4788 22.3759 12.5191 23.606L11.9688 24.3115L11.3503 33.208C11.241 34.7804 9.93367 36 8.35755 36H7.5H6.64245C5.06633 36 3.75897 34.7804 3.64967 33.208L3.03125 24.3115L2.48089 23.606C1.52122 22.3759 1 20.8605 1 19.3003V15C1 12.7909 2.79086 11 5 11Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="7.5" cy="4.5" r="3.5" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M16.5217 11L17.0852 11.1588C18.8092 11.6447 20 13.2176 20 15.0088V19.1697C20 20.8096 19.4243 22.3974 18.3733 23.6561L17.8261 24.3115L16.9603 33.6625C16.8574 34.7739 16.0765 35.7051 15 36V36" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M14 8C15.6569 8 17 6.433 17 4.5C17 2.567 15.6569 1 14 1" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>8<span>ხალხები</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="cost">
+                                        <p>დან</p>
+                                        <p class="price">65 GEL/day</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card  fadeInUp wow">
+                        <a href="#">
+                            <div class="img-cover">
+                                <img src="img/hotel-list/hotel1.jpg" alt="">
+                            </div>
+                            <div class="card-wrapp">
+                                <div class="text-wrapp">
+                                    <p class="place">ნაკრა, ნაკრა</p>
+                                    <p class="valley">ნაკრას ხეობა</p>
+                                </div>
+                                <p class="name">სასტუმრო ნაკრა</p>
+                                <div class="more">
+                                    <div class="info">
+                                        <div class="item">
+                                            <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M24 36H5V1H24V36Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 32H10C9.44772 32 9 31.5523 9 31V27C9 26.4477 9.44519 26 9.99748 26H19.0017C19.554 26 20 26.4477 20 27V31C20 31.5523 19.5523 32 19 32Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 16H10C9.44772 16 9 15.5523 9 15V6C9 5.44772 9.44519 5 9.99748 5H19.0017C19.554 5 20 5.44771 20 6V15C20 15.5523 19.5523 16 19 16Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="20" cy="21" r="1" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M0 36L29 36" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>5<span>ოთახები</span></p>
+                                        </div>
+                                        <div class="item">
+                                            <svg width="21" height="37" viewBox="0 0 21 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 11H7.5H10C12.2091 11 14 12.7909 14 15V19.3003C14 20.8605 13.4788 22.3759 12.5191 23.606L11.9688 24.3115L11.3503 33.208C11.241 34.7804 9.93367 36 8.35755 36H7.5H6.64245C5.06633 36 3.75897 34.7804 3.64967 33.208L3.03125 24.3115L2.48089 23.606C1.52122 22.3759 1 20.8605 1 19.3003V15C1 12.7909 2.79086 11 5 11Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="7.5" cy="4.5" r="3.5" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M16.5217 11L17.0852 11.1588C18.8092 11.6447 20 13.2176 20 15.0088V19.1697C20 20.8096 19.4243 22.3974 18.3733 23.6561L17.8261 24.3115L16.9603 33.6625C16.8574 34.7739 16.0765 35.7051 15 36V36" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M14 8C15.6569 8 17 6.433 17 4.5C17 2.567 15.6569 1 14 1" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>8<span>ხალხები</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="cost">
+                                        <p>დან</p>
+                                        <p class="price">65 GEL/day</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card  fadeInUp wow">
+                        <a href="#">
+                            <div class="img-cover">
+                                <img src="img/hotel-list/hotel1.jpg" alt="">
+                            </div>
+                            <div class="card-wrapp">
+                                <div class="text-wrapp">
+                                    <p class="place">ნაკრა, ნაკრა</p>
+                                    <p class="valley">ნაკრას ხეობა</p>
+                                </div>
+                                <p class="name">სასტუმრო ნაკრა</p>
+                                <div class="more">
+                                    <div class="info">
+                                        <div class="item">
+                                            <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M24 36H5V1H24V36Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 32H10C9.44772 32 9 31.5523 9 31V27C9 26.4477 9.44519 26 9.99748 26H19.0017C19.554 26 20 26.4477 20 27V31C20 31.5523 19.5523 32 19 32Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 16H10C9.44772 16 9 15.5523 9 15V6C9 5.44772 9.44519 5 9.99748 5H19.0017C19.554 5 20 5.44771 20 6V15C20 15.5523 19.5523 16 19 16Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="20" cy="21" r="1" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M0 36L29 36" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>5<span>ოთახები</span></p>
+                                        </div>
+                                        <div class="item">
+                                            <svg width="21" height="37" viewBox="0 0 21 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 11H7.5H10C12.2091 11 14 12.7909 14 15V19.3003C14 20.8605 13.4788 22.3759 12.5191 23.606L11.9688 24.3115L11.3503 33.208C11.241 34.7804 9.93367 36 8.35755 36H7.5H6.64245C5.06633 36 3.75897 34.7804 3.64967 33.208L3.03125 24.3115L2.48089 23.606C1.52122 22.3759 1 20.8605 1 19.3003V15C1 12.7909 2.79086 11 5 11Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="7.5" cy="4.5" r="3.5" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M16.5217 11L17.0852 11.1588C18.8092 11.6447 20 13.2176 20 15.0088V19.1697C20 20.8096 19.4243 22.3974 18.3733 23.6561L17.8261 24.3115L16.9603 33.6625C16.8574 34.7739 16.0765 35.7051 15 36V36" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M14 8C15.6569 8 17 6.433 17 4.5C17 2.567 15.6569 1 14 1" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>8<span>ხალხები</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="cost">
+                                        <p>დან</p>
+                                        <p class="price">65 GEL/day</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card  fadeInUp wow">
+                        <a href="#">
+                            <div class="img-cover">
+                                <img src="img/hotel-list/hotel1.jpg" alt="">
+                            </div>
+                            <div class="card-wrapp">
+                                <div class="text-wrapp">
+                                    <p class="place">ნაკრა, ნაკრა</p>
+                                    <p class="valley">ნაკრას ხეობა</p>
+                                </div>
+                                <p class="name">სასტუმრო ნაკრა</p>
+                                <div class="more">
+                                    <div class="info">
+                                        <div class="item">
+                                            <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M24 36H5V1H24V36Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 32H10C9.44772 32 9 31.5523 9 31V27C9 26.4477 9.44519 26 9.99748 26H19.0017C19.554 26 20 26.4477 20 27V31C20 31.5523 19.5523 32 19 32Z" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M19 16H10C9.44772 16 9 15.5523 9 15V6C9 5.44772 9.44519 5 9.99748 5H19.0017C19.554 5 20 5.44771 20 6V15C20 15.5523 19.5523 16 19 16Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="20" cy="21" r="1" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M0 36L29 36" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>5<span>ოთახები</span></p>
+                                        </div>
+                                        <div class="item">
+                                            <svg width="21" height="37" viewBox="0 0 21 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 11H7.5H10C12.2091 11 14 12.7909 14 15V19.3003C14 20.8605 13.4788 22.3759 12.5191 23.606L11.9688 24.3115L11.3503 33.208C11.241 34.7804 9.93367 36 8.35755 36H7.5H6.64245C5.06633 36 3.75897 34.7804 3.64967 33.208L3.03125 24.3115L2.48089 23.606C1.52122 22.3759 1 20.8605 1 19.3003V15C1 12.7909 2.79086 11 5 11Z" stroke="#FE6A49" stroke-width="2" />
+                                                <circle cx="7.5" cy="4.5" r="3.5" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M16.5217 11L17.0852 11.1588C18.8092 11.6447 20 13.2176 20 15.0088V19.1697C20 20.8096 19.4243 22.3974 18.3733 23.6561L17.8261 24.3115L16.9603 33.6625C16.8574 34.7739 16.0765 35.7051 15 36V36" stroke="#FE6A49" stroke-width="2" />
+                                                <path d="M14 8C15.6569 8 17 6.433 17 4.5C17 2.567 15.6569 1 14 1" stroke="#FE6A49" stroke-width="2" />
+                                            </svg>
+                                            <p>8<span>ხალხები</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="cost">
+                                        <p>დან</p>
+                                        <p class="price">65 GEL/day</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="load-more ">
+                    <a href="#" class="outline big">Მეტის ჩატვირთვა</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-separator">
+            <div class="img-wrapp" data-parallax="scroll" data-image-src="img/views/view3.jpg">
+                <!-- <img class="view" src="img/views/view3.jpg" alt=""> -->
+            </div>
+            <img class="decoration" src="img/icon/decoration.svg" alt="">
+        </div>
+        <div class="block  fadeInUp wow">
+            <div class="side with-text  fadeInUp wow">
+                <div class="text-wrapp fadeInUp wow">
+                    <h2>
+                        გამოცდილება ლაშქრობა, ჭენაობა, თევზაობა, მოთხრობა და სხვა ...
+                    </h2>
+                    <p>
+                        ინტერაქტიული და სახელმძღვანელო გამოცდილება, სადაც სტუმრები დააგემოვნებენ და შეისწავლიან უნიკალური გემოვნების პროფილების იდენტიფიცირებას (და დაფასებას!), რომლებიც სხვადასხვა ჩაის აძლევს მათ განსხვავებას.
+                    </p>
+                    <div class="controls fadeInUp wow">
+                        <a href="#" class="more outline">გაიგე მეტი</a>
+                    </div>
+                </div>
+                <img class="horisontal fadeInUp wow" src="img/views/food2.jpg" alt="">
+            </div>
+            <div class="side">
+                <!-- <div class="image vertical fadeInUp wow">
+						
+					</div> -->
+                <img class="vertical fadeInUp wow" src="img/views/food1.jpg" alt="">
+                <img class="decoration" src="img/icon/decoration-hor.svg" alt="">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <footer>
+            <img class="background" src="img/footer.jpg" alt="">
+            <div class="links">
+                <div class="social-media facebook">
+                    <a href="#">
+                        <div class="img-wrapp">
+                            <img src="img/icon/Facebook-color.svg" alt="">
+                        </div>
+                        <p>გაჰყევით ჩვენს პროექტს</p>
+                        <p>/WelcometoChubekhevi</p>
+                    </a>
+                </div>
+                <div class="social-media facebook">
+                    <a href="#">
+                        <div class="img-wrapp">
+                            <img src="img/icon/youtube-color.svg" alt="">
+                        </div>
+                        <p>უყურეთ ჩვენს ვიდეოებს</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>საავტორო უფლებები <span>© 2019</span> ყველა უფლება დაცულია.</p>
+                <a class="hashtag" href="#">#spend4seasonsingeorgia</a>
+                <a href="#" class="creators">
+                    <img src="img/page.png" alt="">
+                    <p>Developed by<br>PAGE Media Solutions</p>
+                </a>
+            </div>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/plax.js"></script>
+    <script src="js/hotel-list.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
+</body>
+
+</html>

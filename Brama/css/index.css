@@ -1,0 +1,815 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Medium.eot);
+    src: local('../font/Gotham Pro Medium'), local('GothamPro-Medium'), url(../font/GothamPro-Medium.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Medium.woff) format('woff'), url(../font/GothamPro-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Bold.eot);
+    src: local('../font/Gotham Pro Bold'), local('GothamPro-Bold'), url(../font/GothamPro-Bold.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Bold.woff) format('woff'), url(../font/GothamPro-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Light.eot);
+    src: local('../font/Gotham Pro Light'), local('GothamPro-Light'), url(../font/GothamPro-Light.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Light.woff) format('woff'), url(../font/GothamPro-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Black.eot);
+    src: local('../font/Gotham Pro Black'), local('GothamPro-Black'), url(../font/GothamPro-Black.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Black.woff) format('woff'), url(../font/GothamPro-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro.eot);
+    src: local('../font/Gotham Pro'), local('GothamPro'), url(../font/GothamPro.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro.woff) format('woff'), url(../font/GothamPro.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+.font-light-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 300;
+    font-style: normal
+}
+
+.font-regular-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+.font-medium-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+
+.font-bold-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 700;
+    font-style: normal
+}
+
+.font-black-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 900;
+    font-style: normal
+}
+
+body {
+    background: transparent url(../img/eggg.svg) top left no-repeat;
+    background-position: -600px 250px
+}
+
+.header {
+    height: 100vh
+}
+
+.header-rotator {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0
+}
+
+.header-rotator .slick-dots {
+    opacity: 0;
+    pointer-events: none
+}
+
+.header-rotator .slick-arrow:before {
+    display: none
+}
+
+.header-rotator .slick-prev {
+    height: 34px;
+    width: 16px;
+    left: calc((100% - 1000px)/ 2) !important;
+    z-index: 999;
+    top: unset;
+    bottom: 8vh
+}
+
+.header-rotator .slick-next {
+    height: 34px;
+    width: 16px;
+    right: unset;
+    left: calc((100% - 1000px)/ 2 + 120px) !important;
+    z-index: 999;
+    top: unset;
+    bottom: 8vh
+}
+
+div.item {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+div.item:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2F3437;
+    opacity: .4
+}
+
+div.item:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .1) 53.13%, rgba(0, 0, 0, .4) 100%)
+}
+
+div.item .back,
+div.item video {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+div.item .content-container {
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+div.item .border {
+    margin-top: 20vh;
+    display: block;
+    height: 60vh;
+    width: 400px;
+    border: 8px solid #009877;
+    position: relative;
+    transition: .3s all ease-in-out
+}
+
+div.item .text-wrapp {
+    position: absolute;
+    bottom: 40px;
+    width: 75%;
+    margin: 0 auto;
+    padding-left: 60px
+}
+
+div.item .text-wrapp h2 {
+    font-size: 64px;
+    line-height: 70px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    width: 40vw;
+    margin-bottom: 36px;
+    color: #fff;
+    width: 50vw;
+    opacity: 0
+}
+
+div.item .text-wrapp p {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 26px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 32px;
+    width: 50vw;
+    opacity: 0
+}
+
+div.item .text-wrapp a {
+    font-size: 25px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    opacity: 0;
+    padding: 16px 43px;
+    background: #009877;
+    border-radius: 8px;
+    width: 282px;
+    height: 56px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    transition: .3s all ease-in-out
+}
+
+div.item .text-wrapp a:hover {
+    color: #fff !important;
+    background: #00654f;
+    transition: .3s all ease-in-out
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    animation: .5s ease-in-out 0s fadeInLeft;
+    animation-fill-mode: both
+}
+
+.header {
+    position: relative
+}
+
+.header .anhor {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    right: 60px
+}
+
+.header .anhor p {
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 13px;
+    color: #FFF;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 300;
+    font-style: normal
+}
+
+.header video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover
+}
+
+.header .slide-count {
+    display: inline-flex;
+    position: absolute;
+    left: calc((100% - 1000px)/ 2 + 15px) !important;
+    top: unset;
+    bottom: calc(8vh + 19px);
+    height: 34px;
+    white-space: nowrap
+}
+
+.header .slide-count p {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 28px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.category {
+    margin-top: 85px;
+    margin-bottom: 100px
+}
+
+.category .title {
+    max-width: 770px;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 60px
+}
+
+.category-cards {
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.category-cards .card {
+    width: calc((100% - 20px)/ 2);
+    margin-bottom: 20px;
+    padding-top: 50%;
+    margin-right: 20px;
+    position: relative
+}
+
+.category-cards .card:nth-child(2n) {
+    margin-right: 0
+}
+
+.category-cards .card:before {
+    content: '';
+    display: block;
+    opacity: 0;
+    top: 20px;
+    height: calc(100% - 60px);
+    width: calc(100% - 2 * 80px);
+    left: 0;
+    right: 0;
+    border: 8px solid #009877;
+    position: absolute;
+    z-index: 999;
+    transition: .3s all ease-in-out;
+    margin: 0 auto
+}
+
+.category-cards .card:hover:before {
+    opacity: 1;
+    transition: .3s all ease-in-out
+}
+
+.card {
+    display: block;
+    float: left;
+    overflow: hidden;
+    position: relative
+}
+
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.card .text-block {
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .4) 0, rgba(0, 0, 0, .1) 53.13%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.card .text-block h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    width: 180px;
+    text-align: center
+}
+
+.distibutors {
+    background: transparent url(../img/background/distibutors.jpg) center center no-repeat;
+    background-size: cover;
+    margin-bottom: 107px
+}
+
+.distibutors .text-wrapp {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 130px 0 75px 0;
+    text-align: center
+}
+
+.distibutors .text-wrapp h2 {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 36px;
+    color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 45px
+}
+
+.distibutors .text-wrapp p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 43px
+}
+
+.distibutors .text-wrapp a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 318px;
+    height: 40px;
+    background: #009877;
+    border-radius: 8px;
+    color: #fff;
+    margin: 0 auto;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+
+.distibutors .text-wrapp a:hover {
+    color: #fff !important;
+    background: #007f63
+}
+
+.promotion-card {
+    max-width: 1205px;
+    margin: 0 auto;
+    margin-bottom: 120px
+}
+
+.promotion-card .card {
+    width: calc((100% - 40px)/ 3);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-top: 20%;
+    display: block
+}
+
+.promotion-card .card:nth-child(3n) {
+    margin-right: 0
+}
+
+.promotion-card .card .text-block {
+    height: 120px
+}
+
+.promotion-card .card h2 {
+    line-height: 26px;
+    width: 250px
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.news-container h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 35px;
+    text-align: center
+}
+
+.news-container .block.news {
+    width: calc(100% / 4 - 15px);
+    margin-right: 20px;
+    height: 310px
+}
+
+.news-container .block.news:nth-child(3n) {
+    margin-right: 20px
+}
+
+.news-container .block.news:nth-child(4n) {
+    margin-right: 0
+}
+
+.news-container .block.news .img-cover {
+    margin-bottom: 15px
+}
+
+.news-container .block.news h2 {
+    width: 100%
+}
+
+@media screen and (min-width:768px) and (max-width:1440px) {
+    div.item .text-wrapp h2 {
+        font-size: 50px;
+        line-height: 60px
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1220px) {
+
+    .category .title,
+    .category-cards,
+    .news-container,
+    .promotion-card {
+        max-width: 760px
+    }
+
+    .promotion-card .card {
+        width: calc(100% / 2 - 10px);
+        padding-top: 32%
+    }
+
+    .promotion-card .card:nth-child(3n) {
+        margin-right: 20px
+    }
+
+    .promotion-card .card:nth-child(2n) {
+        margin-right: 0
+    }
+
+    .news-container .block.news {
+        width: calc(100% / 2 - 10px);
+        margin-right: 20px;
+        height: 350px;
+        margin-bottom: 40px;
+        max-width: unset
+    }
+
+    .news-container .block.news:nth-child(2n) {
+        margin-right: 0
+    }
+
+    .header video {
+        width: 100%
+    }
+
+    .header .anhor {
+        right: 0
+    }
+
+    .header .slide-count {
+        left: calc((100% - 760px)/ 2 + 15px) !important
+    }
+
+    .header-rotator .slick-prev {
+        left: calc((100% - 760px)/ 2) !important
+    }
+
+    .header-rotator .slick-next {
+        left: calc((100% - 760px)/ 2 + 120px) !important
+    }
+
+    div.item .content-container {
+        max-width: 760px
+    }
+
+    div.item .border {
+        margin-left: -72px;
+        width: 760px
+    }
+
+    div.item .text-wrapp {
+        width: 760px
+    }
+
+    div.item .text-wrapp h2 {
+        width: 90%;
+        font-size: 42px;
+        line-height: 52px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .category .title {
+        max-width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 50px
+    }
+
+    .category {
+        margin-bottom: 70px
+    }
+
+    .category-cards {
+        width: calc(100% - 40px)
+    }
+
+    .category-cards .card {
+        width: 100%;
+        float: unset;
+        padding-top: 107%
+    }
+
+    .category-cards .card .text-block {
+        height: 100px
+    }
+
+    .category-cards .card .text-block h2 {
+        font-size: 16px;
+        line-height: 18px
+    }
+
+    .distibutors {
+        margin-bottom: 60px
+    }
+
+    .distibutors .text-wrapp {
+        width: calc(100% - 40px);
+        padding-top: 85px
+    }
+
+    .distibutors .text-wrapp h2,
+    .distibutors .text-wrapp p {
+        width: 100%
+    }
+
+    .distibutors .text-wrapp h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 25px
+    }
+
+    .distibutors .text-wrapp p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 26px
+    }
+
+    .distibutors .text-wrapp a {
+        font-size: 14px;
+        line-height: 14px;
+        width: 225px;
+        padding: 9px 15px
+    }
+
+    .promotion-card {
+        width: calc(100% - 40px);
+        margin-bottom: 65px
+    }
+
+    .promotion-card .card {
+        width: 100%;
+        margin-right: 0;
+        float: unset;
+        padding-top: 55%
+    }
+
+    .promotion-card .card .text-block {
+        height: 100px
+    }
+
+    .promotion-card .card .text-block h2 {
+        font-size: 20px;
+        line-height: 24px
+    }
+
+    .news-container {
+        width: calc(100% - 40px)
+    }
+
+    .news-container h2 {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left
+    }
+
+    .news-container .block.news {
+        margin-bottom: 36px;
+        width: 100%;
+        margin-right: 0;
+        height: 320px
+    }
+
+    .header {
+        height: 500px
+    }
+
+    .header .anhor {
+        display: none
+    }
+
+    .header video {
+        height: 100%
+    }
+
+    .header .slide-count p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+
+    .header .slide-count {
+        left: 31px !important;
+        bottom: 48px;
+        height: 25px;
+        width: 72px
+    }
+
+    .header {
+        height: 500px
+    }
+
+    .header-rotator {
+        height: 500px
+    }
+
+    .header-rotator .slick-next,
+    .header-rotator .slick-prev {
+        bottom: 35px;
+        height: 25px;
+        width: 12px
+    }
+
+    .header-rotator .slick-next img,
+    .header-rotator .slick-prev img {
+        height: 100%;
+        width: 100%
+    }
+
+    .header-rotator .slick-prev {
+        left: 20px !important
+    }
+
+    .header-rotator .slick-next {
+        left: 100px !important
+    }
+
+    div.item .border {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        height: 230px;
+        margin-top: 170px
+    }
+
+    div.item .text-wrapp {
+        padding-left: 24px;
+        width: 100%;
+        padding-right: 0;
+        bottom: 20px
+    }
+
+    div.item .text-wrapp h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 15px;
+        width: 100%
+    }
+
+    div.item .text-wrapp p {
+        font-size: 14px;
+        line-height: 24px;
+        font-family: 'Gotham Pro', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        width: 100%
+    }
+
+    div.item .text-wrapp a {
+        width: 145px;
+        padding: 9px 15px;
+        font-size: 14px;
+        line-height: 14px;
+        height: 32px
+    }
+}

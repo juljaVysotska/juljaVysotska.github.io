@@ -1,0 +1,126 @@
+@import url(font.less);
+
+
+.blog {
+
+
+    .blog-title {
+        margin-bottom: 170px;
+
+        h1 {
+            text-transform: uppercase;
+            .font-caps-BPG();
+            font-weight: 600;
+            font-size: 4.0vw;
+            line-height: 5vw;
+
+
+
+            @media screen and (max-width: 1360px) {
+                line-height: 96px;
+                font-size: 72px;
+
+            }
+        }
+
+        p {
+            font-size: 26px;
+            line-height: 32px;
+            .font-light-BPG()
+        }
+    }
+}
+
+.section-title h1 {
+    .font-caps-BPG();
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 4.0vw;
+    line-height: 5vw;
+
+    @media screen and (max-width: 1900px) {
+
+        font-size: 88px;
+        line-height: 100px;
+    }
+}
+
+.blog-article {
+
+    h3 {
+
+        font-size: 33px;
+        line-height: 40px;
+        .font-medium-BPG();
+        max-height: 120px;
+        height: unset;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+
+    .date {
+        font-size: 20px;
+        .font-book-BPG();
+        line-height: 28px;
+    }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 1200px) {
+    .blog {
+
+
+        .section-title {
+            margin-bottom: 90px;
+
+            h1 {
+                .font-medium-BPG();
+
+                font-size: 102px;
+                line-height: 112px;
+                letter-spacing: -0.05em;
+            }
+
+            p {
+
+                font-size: 26px;
+                line-height: 36px;
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .blog {
+        .blog-title {
+            margin-bottom: 100px;
+
+            h1 {
+                font-size: 45px;
+                line-height: 48px;
+                letter-spacing: -0.05em;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .blog-article {
+
+        h3 {
+            font-size: 28px;
+            max-height: 109px;
+            line-height: 36px;
+        }
+
+        .date {
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+    }
+}

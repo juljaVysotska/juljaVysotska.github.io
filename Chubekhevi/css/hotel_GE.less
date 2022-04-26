@@ -1,0 +1,329 @@
+@import url(font.less);
+
+
+.first-view {
+
+    .anhor {
+        p {
+            .font-light-Oxygen();
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+
+    .headline {
+        position: relative;
+
+        h1 {
+            font-size: 6vw;
+            line-height: 7.2vw;
+                text-transform: uppercase;
+                .font-caps-BPG();
+                
+            letter-spacing: -0.05em;
+
+            // @media (max-width: 1360px) {
+            //     font-size: 115px;
+            //     line-height: 128px;
+            // }
+        }
+    }
+
+    .location {
+
+        .location_country,
+        .location_valley {
+            .font-book-BPG();
+
+            font-size: 28px;
+            line-height: 28px;
+        }
+
+    }
+}
+
+
+.info {
+
+    .block {
+
+
+        .text {
+            .title {
+                .font-book-BPG();
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            .item {
+                .description {
+                    .font-book-BPG();
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+
+            }
+        }
+    }
+
+    .full-info {
+        .image-description {
+            .item {
+                .title {
+                    .font-book-BPG();
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+
+                .value {
+                    .font-book-BPG();
+                    font-size: 22px;
+                    line-height: 28px;
+
+                    p {
+                        padding-top: 5px;
+                    }
+
+
+                    .number {
+                        .font-light-Oxygen();
+                        font-size: 32px;
+                        line-height: 28px;
+                        padding-top: 0
+                    }
+                }
+
+
+            }
+        }
+
+        .text-description {
+            font-size: 22px;
+            line-height: 32px;
+            .font-book-BPG();
+        }
+    }
+}
+
+
+.mobile-info {
+    h2 {
+        .font-medium-BPG();
+
+
+        font-size: 45px;
+        line-height: 56px;
+
+
+    }
+
+
+    .location {
+
+        .location_country,
+        .location_valley {
+            .font-book-BPG();
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .location_valley {
+            border-left: unset;
+            padding: 0;
+        }
+
+        .location_country {
+            border-right: 1px solid #000;
+            padding-right: 5px;
+
+        }
+    }
+
+    .capacity {
+        .item {
+            p {
+                .font-book-BPG();
+
+                font-size: 18px;
+                line-height: 28px;
+
+                span {
+
+                    font-size: 20px;
+                    line-height: 28px;
+                    .font-regular-Oxygen();
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+
+}
+
+.return {
+    p {
+        // font-size: 45px;
+        // line-height: 56px;
+        .font-book-BPG();
+
+        font-size: 2.6vw;
+        line-height: 4.2vw;
+        letter-spacing: -0.05em;
+
+
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1200px) {
+    .first-view {
+        padding-left: 40px;
+
+        .headline {
+            position: relative;
+            max-width: 80%;
+
+            h1 {
+                font-size: 102px;
+                line-height: 112px;
+                letter-spacing: -0.05em;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 760px) {
+
+
+    .return {
+        p {
+            font-size: 36px;
+            line-height: 46px;
+            .font-medium-BPG();
+
+
+        }
+    }
+
+    .info {
+
+        .block {
+            .icon {
+                padding-top: 27px;
+            }
+
+            .text {
+                .title {
+                    .font-book-BPG();
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+
+                .item {
+
+                    a {
+                        .font-light-Oxygen();
+
+                    }
+
+                    .description {
+                        .font-book-BPG();
+                        font-size: 22px;
+                        line-height: 28px;
+                    }
+
+                    .value {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                }
+            }
+        }
+
+        .full-info {
+            .image-description {
+                .item {
+                    .title {
+                        .font-book-BPG();
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+
+                    .value {
+                        .font-book-BPG();
+                        font-size: 22px;
+                        line-height: 28px;
+
+                        p {
+                            padding-top: 5px;
+                        }
+
+
+                        .number {
+                            .font-light-Oxygen();
+                            font-size: 32px;
+                            line-height: 28px;
+                            padding-top: 0
+                        }
+                    }
+
+
+                }
+            }
+
+            .text-description {
+                font-size: 22px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .mobile-info {
+        h2 {
+
+            font-size: 45px;
+            line-height: 48px;
+            letter-spacing: -0.05em;
+        }
+
+        .location {
+            display: inline;
+            margin-bottom: 10px;
+
+            .location_country,
+            .location_valley {
+                display: inline;
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+
+        .capacity {
+            margin-top: 10px;
+
+            .item {
+                p {
+
+                    font-size: 20px;
+                    line-height: 28px;
+
+                    span {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    .return {
+        p {
+            font-size: 34px;
+            line-height: 38px;
+            letter-spacing: -0.05em;
+            .font-book-BPG();
+        }
+    }
+
+}

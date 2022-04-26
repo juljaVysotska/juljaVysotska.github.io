@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Medium.eot);
+    src: local('../font/Gotham Pro Medium'), local('GothamPro-Medium'), url(../font/GothamPro-Medium.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Medium.woff) format('woff'), url(../font/GothamPro-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Bold.eot);
+    src: local('../font/Gotham Pro Bold'), local('GothamPro-Bold'), url(../font/GothamPro-Bold.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Bold.woff) format('woff'), url(../font/GothamPro-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Light.eot);
+    src: local('../font/Gotham Pro Light'), local('GothamPro-Light'), url(../font/GothamPro-Light.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Light.woff) format('woff'), url(../font/GothamPro-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro-Black.eot);
+    src: local('../font/Gotham Pro Black'), local('GothamPro-Black'), url(../font/GothamPro-Black.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro-Black.woff) format('woff'), url(../font/GothamPro-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../font/GothamPro.eot);
+    src: local('../font/Gotham Pro'), local('GothamPro'), url(../font/GothamPro.eot?#iefix) format('embedded-opentype'), url(../font/GothamPro.woff) format('woff'), url(../font/GothamPro.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+.font-light-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 300;
+    font-style: normal
+}
+
+.font-regular-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+.font-medium-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+
+.font-bold-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 700;
+    font-style: normal
+}
+
+.font-black-G {
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 900;
+    font-style: normal
+}
